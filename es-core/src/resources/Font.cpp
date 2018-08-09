@@ -14,7 +14,7 @@ std::map< std::pair<std::string, int>, std::weak_ptr<Font> > Font::sFontMap;
 Font::FontFace::FontFace(ResourceData&& d, int size) : data(d)
 {
 	int err = FT_New_Memory_Face(sLibrary, data.ptr.get(), (FT_Long)data.length, 0, &face);
-	try{assert(!err);}
+	assert(!err);
 	
 	if(!err)
 		FT_Set_Pixel_Sizes(face, 0, size);
