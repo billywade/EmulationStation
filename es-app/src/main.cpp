@@ -90,7 +90,7 @@ bool parseArgs(int argc, char* argv[])
 			Settings::getInstance()->setBool("ParseGamelistOnly", true);
 		}else if(strcmp(argv[i], "--ignore-gamelist") == 0)
 		{
-			Settings::getInstance()->setBool("IgnoreGamelist", true);
+			Settings::getInstance()->setBool("IgnoreGamelist", false);
 		}else if(strcmp(argv[i], "--show-hidden-files") == 0)
 		{
 			Settings::getInstance()->setBool("ShowHiddenFiles", true);
